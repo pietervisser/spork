@@ -4,15 +4,15 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{spork}
+  s.name = %q{pietervisser-spork}
   s.version = "0.7.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tim Harper"]
   s.date = %q{2009-12-28}
   s.default_executable = %q{spork}
-  s.description = %q{A forking Drb spec server}
-  s.email = ["timcharper+spork@gmail.com"]
+  s.description = %q{Fork of A forking Drb spec server}
+  s.email = ["info@illusoft.com"]
   s.executables = ["spork"]
   s.extra_rdoc_files = [
     "MIT-LICENSE",
@@ -68,7 +68,7 @@ Gem::Specification.new do |s|
      "spec/support/fake_framework.rb",
      "spec/support/fake_run_strategy.rb"
   ]
-  s.homepage = %q{http://github.com/timcharper/spork}
+  s.homepage = %q{http://github.com/pietervisser/spork}
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{spork}
