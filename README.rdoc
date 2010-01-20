@@ -3,7 +3,8 @@
 This is a fork of http://github.com/timcharper/spork
 For more information, please look at his repository.
 
-to install this fork as a gem use: [sudo] gem install pietervisser-spork
+to install this fork as a gem:
+  [sudo] gem install pietervisser-spork
 
 == Changes
 
