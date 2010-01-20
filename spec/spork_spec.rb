@@ -60,6 +60,12 @@ describe Spork do
     Spork.send(:expanded_caller, "/boo/../yah.rb:31").should == "/yah.rb:31"
   end
   
+  if RUBY_PLATFORM =~ /(:?mswin|mingw)/
+    it "expands a windows caller line, preserving the line number" do
+      Spork.send(:expanded_caller, "c:/boo/../yah.rb:31").should == "c:/yah.rb:31"
+    end
+  end
+  
   describe "#using_spork?" do
     it "returns true if Spork is being used" do
       Spork.using_spork?.should be_false

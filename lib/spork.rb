@@ -108,9 +108,9 @@ module Spork
       end
       
       def expanded_caller(caller_line)
-        file, line = caller_line.split(":")
-        line.gsub(/:.+/, '')
-        File.expand_path(file, Dir.pwd) + ":" + line
+        path, rest = File.split caller_line
+        file, line = rest.split(":")
+        File.expand_path(File.join(path, file), Dir.pwd) + ":" + line
       end
       
       def already_ran?(caller_script_and_line)
