@@ -106,10 +106,14 @@ module Spork
       def already_ran
         @already_ran ||= []
       end
-      
+
       def expanded_caller(caller_line)
-        path, rest = File.split caller_line
-        file, line = rest.split(":")
+        path, file = File.split caller_line
+        if caller_line.end_with? file
+          file, line = file.split(":")
+        else
+          line = caller_line.match(/(\d+)$/)[1]
+        end
         File.expand_path(File.join(path, file), Dir.pwd) + ":" + line
       end
       
